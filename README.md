@@ -23,11 +23,11 @@ fetch(`https://polinashneider.space/user`, {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer: PolinaShneider'
+      'Authorization': 'Bearer: TS-040903'
     },
     body: JSON.stringify({
-      "name": "Полина",
-      "secondName": "Shneider",
+      "name": "Тanya",
+      "secondName": "Senko",
       "phone": 89990000000,
       "email": "polina@gmail.com",
       "agree": true
