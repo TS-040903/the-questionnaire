@@ -40,12 +40,9 @@ form.addEventListener('submit', async(event) => {
     }
 });
 
-
-
-
-function showSuccessNotification(message) {
+function showNotification(message, notificationType) {
     const notification = document.createElement('div');
-    notification.classList.add('notification', 'success');
+    notification.classList.add('notification', notificationType);
     notification.textContent = message;
     document.body.appendChild(notification);
     setTimeout(() => {
@@ -53,12 +50,6 @@ function showSuccessNotification(message) {
     }, 3000);
 }
 
-function showErrorNotification(message) {
-    const notification = document.createElement('div');
-    notification.classList.add('notification', 'error');
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    setTimeout(() => {
-        notification.remove();
-    }, 5000);
-}
+
+showNotification("Данные успешно отправлены!", "success");
+showNotification("Произошла ошибка при отправке данных.", "error");
