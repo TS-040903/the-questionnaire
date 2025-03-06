@@ -40,7 +40,7 @@ form.addEventListener('submit', async(event) => {
     }
 });
 
-function showNotification(message, notificationType) {
+function showSuccessNotification(message, notificationType) {
     const notification = document.createElement('div');
     notification.classList.add('notification', notificationType);
     notification.textContent = message;
@@ -49,7 +49,5 @@ function showNotification(message, notificationType) {
         notification.remove();
     }, 3000);
 }
-
-
-showNotification("Данные успешно отправлены!", "success");
-showNotification("Произошла ошибка при отправке данных.", "error");
+showSuccessNotification(error.message, "error");
+showSuccessNotification(data.message, "success")
